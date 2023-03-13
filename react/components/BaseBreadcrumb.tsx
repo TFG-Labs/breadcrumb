@@ -135,7 +135,6 @@ const Breadcrumb: React.FC<Props> = ({
             /
             <span className={`${handles.term} ph2 c-on-base`}>{term}</span>
           </span>
-          <p>hello worldx</p>
         </Fragment>
       )}
  
