@@ -1,8 +1,9 @@
 import React, { Fragment, useMemo } from 'react'
 import unorm from 'unorm'
-import { Link } from 'vtex.render-runtime'
+import { Link, useRuntime } from 'vtex.render-runtime'
 import { useCssHandles, applyModifiers } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
+
 
 const CSS_HANDLES = [
   'container',
@@ -79,6 +80,13 @@ const Breadcrumb: React.FC<Props> = ({
   if (!navigationList.length || !shouldBeRendered) {
     return null
   }
+  const runtime = useRuntime()
+  const { route } = runtime
+
+  const { path } = route
+
+
+  console.log(path)
 
   return (
     <div data-testid="breadcrumb" className={`${handles.container} pv3`}>
@@ -87,6 +95,7 @@ const Breadcrumb: React.FC<Props> = ({
         className={`${handles.link} ${handles.homeLink} ${linkBaseClasses} v-mid`}
         page="store.home"
       >
+     
        Home
       </Link>
       {navigationList.map(({ name, href }, i) => {
@@ -112,12 +121,13 @@ const Breadcrumb: React.FC<Props> = ({
                 handles.link,
                 (i + 1).toString()
               )} ${linkBaseClasses}`}
-              to={href}
+              to={path.includes('productClusterIds') ? path : href}
               // See https://github.com/vtex-apps/breadcrumb/pull/66 for the reasoning behind this
               waitToPrefetch={1200}
             >
-              {decodedName}
+              {path.includes('productClusterIds') ? 'Shop the Collection' : decodedName}
             </Link>
+          
           </span>
         )
       })}
@@ -130,8 +140,10 @@ const Breadcrumb: React.FC<Props> = ({
             /
             <span className={`${handles.term} ph2 c-on-base`}>{term}</span>
           </span>
+          <p>hello worldx</p>
         </Fragment>
       )}
+ 
     </div>
   )
 }
