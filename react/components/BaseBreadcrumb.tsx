@@ -82,12 +82,7 @@ const Breadcrumb: React.FC<Props> = ({
   }
   const runtime = useRuntime()
   const { route } = runtime
-
   const { path } = route
-
-
-  console.log(path)
-
   return (
     <div data-testid="breadcrumb" className={`${handles.container} pv3`}>
      {/* The "home page" option on the breadcrumbs  */}
