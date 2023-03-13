@@ -1,6 +1,7 @@
 import React, { Fragment, useMemo } from 'react'
 import unorm from 'unorm'
 import { Link, useRuntime } from 'vtex.render-runtime'
+import { useSearchPage } from 'vtex.search-page-context/SearchPageContext'
 import { useCssHandles, applyModifiers } from 'vtex.css-handles'
 import { useDevice } from 'vtex.device-detector'
 
@@ -80,6 +81,13 @@ const Breadcrumb: React.FC<Props> = ({
   if (!navigationList.length || !shouldBeRendered) {
     return null
   }
+  const { searchQuery } = useSearchPage()
+
+  const { selectedFacets } = searchQuery.variables
+  const isCollection = selectedFacets.some(
+    (facet: { key: string }) => facet.key === 'productClusterIds'
+  )
+  
   const runtime = useRuntime()
   const { route } = runtime
   const { path } = route
@@ -116,11 +124,11 @@ const Breadcrumb: React.FC<Props> = ({
                 handles.link,
                 (i + 1).toString()
               )} ${linkBaseClasses}`}
-              to={path.includes('productClusterIds') ? path : href}
+              to={isCollection ? path : href}
               // See https://github.com/vtex-apps/breadcrumb/pull/66 for the reasoning behind this
               waitToPrefetch={1200}
             >
-              {path.includes('productClusterIds') ? 'Shop the Collection' : decodedName}
+              {isCollection ? 'Shop the Collection' : decodedName}
             </Link>
           
           </span>
