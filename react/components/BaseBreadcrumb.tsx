@@ -82,9 +82,9 @@ const Breadcrumb: React.FC<Props> = ({
   }
   const { searchQuery } = useSearchPage();
 
-  const { selectedFacets } = searchQuery.variables;
+  const selectedFacets  = searchQuery?.variables?.selectedFacets;
 
-  const isCollection = selectedFacets.some((facet: { key: string }) =>
+  const isCollection = selectedFacets?.some((facet: { key: string }) =>
     facet.key.toLowerCase().includes("productcluster")
   );
 
