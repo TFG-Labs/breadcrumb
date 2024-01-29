@@ -5767,9 +5767,9 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-"thefoschini.breadcrumb@http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.5/public/@types/thefoschini.breadcrumb":
-  version "1.9.5"
-  resolved "http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.5/public/@types/thefoschini.breadcrumb#725bbbad971b473f1559d058988bbbe213cdcde4"
+"thefoschini.breadcrumb@http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.6/public/@types/thefoschini.breadcrumb":
+  version "1.9.6"
+  resolved "http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.6/public/@types/thefoschini.breadcrumb#056b95cebac5851245a2404418fb842dd6a2583b"
 
 throat@^5.0.0:
   version "5.0.0"
@@ -6060,9 +6060,9 @@ verror@1.10.0:
   version "0.10.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context#c5e2a97b404004681ee12f4fff7e6b62157786cc"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.6/public/@types/vtex.render-runtime":
-  version "8.132.6"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.6/public/@types/vtex.render-runtime#166e916d8aadbee0cfc4d48a02d3c3e8f2834fc9"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime":
+  version "8.134.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime#ae69e2b2a471291c6c6b155e17510150fbfc2d0e"
 
 "vtex.search-page-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-page-context@0.2.0/public/@types/vtex.search-page-context":
   version "0.2.0"
@@ -6072,9 +6072,9 @@ verror@1.10.0:
   version "0.18.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-icons@0.18.0/public/@types/vtex.store-icons#0ee94d549aa283ce3a13ab987c13eac4fdfd1bba"
 
-"vtex.structured-data@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.structured-data@0.11.0/public/@types/vtex.structured-data":
-  version "0.11.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.structured-data@0.11.0/public/@types/vtex.structured-data#1463d4fab7d27f2091afc662a35848ac17a72b3c"
+"vtex.structured-data@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.structured-data@0.12.0/public/@types/vtex.structured-data":
+  version "0.12.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.structured-data@0.12.0/public/@types/vtex.structured-data#8080f7512fb8c94d7ff58e209d2a3967712442a1"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
