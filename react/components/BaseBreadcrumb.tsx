@@ -1,9 +1,12 @@
 import React, { Fragment, useMemo } from "react";
 import unorm from "unorm";
-import { Link, useRuntime } from "vtex.render-runtime";
+import { useRuntime } from "vtex.render-runtime";
 import { useSearchPage } from "vtex.search-page-context/SearchPageContext";
 import { useCssHandles, applyModifiers } from "vtex.css-handles";
 import { useDevice } from "vtex.device-detector";
+import HeadlessLink from "./HeadlessLink";
+
+
 
 const CSS_HANDLES = [
   "container",
@@ -57,6 +60,8 @@ const getCategoriesList = (categories: string[]): NavigationItem[] => {
   });
 };
 
+
+
 /**
  * Breadcrumb Component.
  */
@@ -94,13 +99,12 @@ const Breadcrumb: React.FC<Props> = ({
   return (
     <div data-testid="breadcrumb" className={`${handles.container} pv3`}>
       {/* The "home page" option on the breadcrumbs  */}
-      <Link
+      <HeadlessLink
         className={`${handles.link} ${handles.homeLink} ${linkBaseClasses} v-mid`}
-        page="store.home"
+        href="/"
       >
         Home
-      </Link>
-
+      </HeadlessLink>
       {isCollection ? (
         <span
           key={`navigation-item-${1}`}
@@ -110,17 +114,15 @@ const Breadcrumb: React.FC<Props> = ({
           )} ph2 c-muted-2`}
         >
           /
-          <Link
+          <HeadlessLink
             className={`${applyModifiers(
               handles.link,
               (1).toString()
             )} ${linkBaseClasses}`}
-            to={path}
-            // See https://github.com/vtex-apps/breadcrumb/pull/66 for the reasoning behind this
-            waitToPrefetch={1200}
+            href={path}
           >
             {"Shop the Collection"}
-          </Link>
+          </HeadlessLink>
         </span>
       ) : (
         navigationList.map(({ name, href }, i) => {
@@ -141,17 +143,15 @@ const Breadcrumb: React.FC<Props> = ({
               )} ph2 c-muted-2`}
             >
               /
-              <Link
+              <HeadlessLink
                 className={`${applyModifiers(
                   handles.link,
                   (i + 1).toString()
                 )} ${linkBaseClasses}`}
-                to={isCollection ? path : href}
-                // See https://github.com/vtex-apps/breadcrumb/pull/66 for the reasoning behind this
-                waitToPrefetch={1200}
+                href={isCollection ? path : href}
               >
                 {isCollection ? "Shop the Collection" : decodedName}
-              </Link>
+              </HeadlessLink>
             </span>
           );
         })
