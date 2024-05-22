@@ -5767,9 +5767,9 @@ test-exclude@^6.0.0:
     glob "^7.1.4"
     minimatch "^3.0.4"
 
-"thefoschini.breadcrumb@http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.6/public/@types/thefoschini.breadcrumb":
-  version "1.9.6"
-  resolved "http://thefoschini.vtexassets.com/_v/public/typings/v1/thefoschini.breadcrumb@1.9.6/public/@types/thefoschini.breadcrumb#056b95cebac5851245a2404418fb842dd6a2583b"
+"thefoschiniqa.breadcrumb@http://thefoschiniqa.vtexassets.com/_v/public/typings/v1/thefoschiniqa.breadcrumb@1.9.7/public/@types/thefoschiniqa.breadcrumb":
+  version "1.9.7"
+  resolved "http://thefoschiniqa.vtexassets.com/_v/public/typings/v1/thefoschiniqa.breadcrumb@1.9.7/public/@types/thefoschiniqa.breadcrumb#358377ce0243c8d923076e69fca7d77a910b0ab3"
 
 throat@^5.0.0:
   version "5.0.0"
@@ -6056,9 +6056,9 @@ verror@1.10.0:
   version "0.2.6"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.device-detector@0.2.6/public/@types/vtex.device-detector#3219242fa5c2f14023d33c3549c2d8de93c76d1f"
 
-"vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context":
-  version "0.10.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context#c5e2a97b404004681ee12f4fff7e6b62157786cc"
+"vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context":
+  version "0.10.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.1/public/@types/vtex.product-context#86ceba68085420edcf54749f07e51a257d2e5d94"
 
 "vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime":
   version "8.134.2"
